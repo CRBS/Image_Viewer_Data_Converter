@@ -7,4 +7,7 @@ Scripts for converting images to the compatible format for the CIL Image Viewer
   * numpy
   * sckit-image
   * joblib
-
+* PHP 7.2+
+  * Sqlite
+* IMOD
+* GDAL (gdal2tiles.py)
