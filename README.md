@@ -17,3 +17,5 @@ Scripts for converting images to the compatible format for the CIL Image Viewer
 ```
 python3 conver2galNsqlite.py INPUT_IMAGE_FOLDER OUTPUT_GDAL_FOLDER OUTPUT_SQLITE_FOLDER
 ```
+
+Assumption: The image name contains the Z slice index number. For example, "temp.0000.tif"
