@@ -32,3 +32,9 @@ python3 conver2gal.py INPUT_IMAGE_FOLDER OUTPUT_GDAL_FOLDER
 ```
 python3 conver2Sqlite3.py INPUT_GDAL_FOLDER OUTPUT_SQLITE_FOLDER
 ```
+
+
+### Rescale image contrast
+```
+python3 conv2uint8-sph.py INPUT_IMAGE_FOLDER OUTPUT_ENHANCED_FOLDER
+```
