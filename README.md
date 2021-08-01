@@ -22,7 +22,13 @@ Assumption: The image name contains the Z slice index number. For example, "temp
 
 
 
-### Convert images to the GDAL tile images
+### Convert images to the GDAL tile images only
 ```
 python3 conver2gal.py INPUT_IMAGE_FOLDER OUTPUT_GDAL_FOLDER
+```
+
+
+### Convert the GDAL tile images to the Sqlite files only
+```
+python3 conver2Sqlite3.py INPUT_GDAL_FOLDER OUTPUT_SQLITE_FOLDER
 ```
