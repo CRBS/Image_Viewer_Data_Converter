@@ -33,6 +33,11 @@ python3 conver2gal.py INPUT_IMAGE_FOLDER OUTPUT_GDAL_FOLDER
 python3 conver2Sqlite3.py INPUT_GDAL_FOLDER OUTPUT_SQLITE_FOLDER
 ```
 
+### Invert the image color
+```
+python3 invertImages.py INPUT_IMAGE_FOLDER OUTPUT_INVERTED_FOLDER
+```
+
 
 ### Rescale image contrast
 ```
