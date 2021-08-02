@@ -43,3 +43,4 @@ python3 invertImages.py INPUT_IMAGE_FOLDER OUTPUT_INVERTED_FOLDER
 ```
 python3 conv2uint8-sph.py INPUT_IMAGE_FOLDER OUTPUT_ENHANCED_FOLDER
 ```
+* This script requires a huge amount of RAM if the image size is in the Gigabyte range
