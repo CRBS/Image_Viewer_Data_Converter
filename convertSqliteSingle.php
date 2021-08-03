@@ -49,6 +49,8 @@ function handleSubFolder($subFolder,$index,$outputFolder,$prefix)
 {
 
     $sqlFilePath = $outputFolder."/".$index.".sqllite3";
+
+
     $db = createDB($sqlFilePath);
 
     $result = array();
@@ -113,7 +115,33 @@ function createDB($outputFile)
 	    }
 	    else
 	    {
-		echo "\n".$outputFile." not exist";
+		      echo "\n".$outputFile." not exist";
+          //////////////Outputing max_zoom info in JSON/////////////////
+          if(strcmp($folder,"0")==0 && is_dir($subFolder))
+          {
+              $max_zoom = 0;
+              $gfiles = scandir($subFolder);
+              foreach($gfiles as $gfile)
+              {
+                 if(strcmp($gfile, ".") == 0 || strcmp($gfile, "..")==0)
+                  continue;
+
+                 if(is_numeric($gfile))
+                 {
+                   $zoom = intval($gfile);
+                   if($zoom > $max_zoom)
+                      $max_zoom = $zoom;
+                 }
+              }
+              $array = array();
+              $array['max_zoom'] = $max_zoom;
+              $json_str = json_encode($array, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+              $jsonPath = $outputFolder."/gdal_info.json";
+              file_put_contents($jsonPath, $json_str);
+
+          }
+          ////////////////////////////////////////////////////////////
+
         	handleSubFolder($subFolder,$folder,$outputFolder,$prefix);
 	    }
 
