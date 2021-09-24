@@ -10,6 +10,7 @@ Scripts for converting images to the compatible format for the CIL Image Viewer
 * PHP 7.2+
   * Sqlite
 * IMOD
+* ImageMagick
 * GDAL (gdal2tiles.py)
 
 
@@ -44,3 +45,8 @@ python3 invertImages.py INPUT_IMAGE_FOLDER OUTPUT_INVERTED_FOLDER
 python3 conv2uint8-sph.py INPUT_IMAGE_FOLDER OUTPUT_ENHANCED_FOLDER
 ```
 * This script requires a huge amount of RAM if the image size is in the Gigabyte range
+
+```
+python3 conv2uint8-ww.py INPUT_IMAGE_FOLDER OUTPUT_ENHANCED_FOLDER
+```
+* This script rescales the images using ImagMagick
